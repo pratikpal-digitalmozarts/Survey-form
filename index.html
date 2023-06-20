@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+
+        #container::before{
+            content: "";
+            /* background-color: black; */
+            background: url("https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80") no-repeat center center/cover;
+            top: 0px;
+            position: fixed;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #box-1{
+            margin: 64px auto;
+            text-align: center;
+        }
+
+        #title , #description{
+            margin: 0px;
+            margin-top: 11px;
+        }
+
+
+        #box-2{
+            display: flex;
+            background-color: #4d6f8db8;
+            flex-direction: column;
+            width: 40%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        /* .form-group{
+            /* margin: auto; */
+            /* text-align: center; */
+    
+
+        input, textarea{
+            width: 97%;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        label{
+            display: flex;
+            margin-bottom: 4px;
+            margin-top: 14px;
+            font-size: 1.17rem;
+        }
+
+        .radio-type, .type-checkbox{
+            /* display: inline-block; */
+            width: 53px;
+            min-width: 1.5rem;
+            min-height: 1.2rem;
+        }
+
+        select{
+            width: 100%;
+            padding: 8px 6px;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        p{
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        #submit{
+            margin-top: 8px;
+            width: 100%;
+            padding: 8px;
+            font-size: 1.2rem;
+            border-radius: 6px;
+        }
+
+        @media (max-width:650px){
+            #box-2{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box-1">
+            <h1 id="title">FreeCodeCamp Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </div>
+        <div id="box-2">
+            <form action="" id="survey-form">
+                <div class="form-group">
+                    <label for="name" id="name-label" >Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="number" id="number-label">Age(Optional):</label>
+                    <input type="number" name="number" id="number" max="99" min="10" placeholder="Enter Your Age">
+                </div>
+                <div class="form-group">
+                    <p>Which would you describe the most:</p>
+                    <select name="role" id="dropdown">
+                        <option disabled selected value>Select your answer</option>
+                        <option value="Student">Student</option>
+                        <option value="job">Full Time Job</option>
+                        <option value="learner">Full Time Learner</option>
+                        <option value="none">Prefer Not TO Say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Would you recommend My form to a friend?</p>
+                    <label>
+                        <input type="radio" name="name" value="definately" class="radio-type" checked>
+                        Definitely
+                    </label>
+                    <label>
+                        <input type="radio" name="name" value="maybe" class="radio-type">
+                        Maybe
+                    </label>
+                    <label>
+                        <input type="radio" name="name" value="not" class="radio-type">
+                        Not Sure
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>What is your favorite feature of freeCodeCamp?</p>
+                    <select name="feature" id="dropdown">
+                        <option disabled selected value>Select Your Option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="opnsource">Open Source</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>What would you like to see improved? (Check all that apply)</p>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Front-end-Projects">
+                        Front-end Projects
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Data-Visualization">
+                        Data Visualization
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Back-end-Projects">
+                        Back-end Projects
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Challenges">
+                        Challenges
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="open-Source-Community">
+                        Open Source Community
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Gitter-help-rooms">
+                        Gitter help rooms
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Videos">
+                        Videos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="City-Meetups">
+                        City Meetups
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Wiki">
+                        Wiki
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Forum">
+                        Forum
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" class="type-checkbox" value="Additional-Courses">
+                        Additional Courses
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Any Commnets or Suggestions</p>
+                    <textarea style="min-height: 106px;" name="text" id="textarea" placeholder="Enter Your Comment Here"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
